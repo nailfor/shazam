@@ -1,0 +1,23 @@
+{
+    "name": "nailfor/shazam",
+    "description": "Fast Dashboard development",
+    "keywords": ["laravel", "shazam"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nailfor"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "nailfor\\shazam\\API\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/framework": ">=5.0",
+        "nailfor/shazam-api": "^0.1"
+    },
+    "minimum-stability": "dev"
+}
