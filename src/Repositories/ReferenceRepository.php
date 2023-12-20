@@ -40,4 +40,12 @@ class ReferenceRepository extends AbstractRootRepository implements ReferenceInt
             'name' => __('name'),
         ];
     }
+
+    public function getForm(): array
+    {
+        return [
+            'id' => 'Id',
+            'name' => __('name'),
+        ];
+    }
 }

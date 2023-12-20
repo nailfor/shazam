@@ -48,6 +48,11 @@ class WebController extends Controller
         return $view->render();
     }
 
+    public function edit(Request $request, string $id): mixed
+    {
+        return $this->show($request, $id);
+    }
+
     public function __call($name, $params)
     {
         if (in_array($name, $this->cant)) {

@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Route;
 
 class Reference
 {
+    protected const REFERENCE = 'reference';
+    
+    protected const EDIT = 'edit';
+
     public static function get(): Collection
     {
         $instance = new static();
@@ -23,12 +27,19 @@ class Reference
             $model = $instance->getModel($routes, $request, $key);
             $name = str_replace($prefix, '', $key);
 
-            $references->push([
+            $reference = [
+                'id' => "$root.$name",
                 'title' => __("$name.title"),
                 'url' => "/$root/$name",
-                'component' => 'reference',
+                'component' => static::REFERENCE,
                 'property' => $model->getProperty(),
-            ]);
+                'form' => [
+                    'component' => static::EDIT,
+                    'property' => $model->getForm(),
+                ],
+            ];
+
+            $references->push($reference);
         }
 
         return $references;

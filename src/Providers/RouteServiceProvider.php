@@ -34,7 +34,6 @@ class RouteServiceProvider extends ServiceProvider
         $this->path = app_path($path);
         $this->namespace = config('shazam.namespace') . '\\' . str_replace('/', '\\', $path);
 
-
         $this->mapRoutes();
         //$this->mapWebRoutes();
     }
