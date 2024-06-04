@@ -17,7 +17,7 @@
     "require": {
         "php": ">=7.1.0",
         "laravel/framework": ">=5.0",
-        "nailfor/shazam-api": "^0.1.4"
+        "nailfor/shazam-api": "^0.1.5"
     },
     "minimum-stability": "dev"
 }
