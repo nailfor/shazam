@@ -18,6 +18,10 @@ return [
         'web' => 'vendor.shazam.dashboard',
     ],
     'paginator' => Paginator::class,
+    'page' => [
+        'page' => 'page',
+        'perPage' => 'per_page',
+    ],
 
     'debug' => env('SQL_DEBUG', false),
 ];
